@@ -65,11 +65,10 @@ public class Book {
             if (available == null) {
                 
             }
-
-
         }
         this.available = available;
     }
+
 
     //----------------------- SETTERS END -----------------------------------------------------------------
     //||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
@@ -102,6 +101,7 @@ public class Book {
     public String getBookInformation(){
         return "ID: "+id+ "Title; "+title+ "Author: "+author+ "Borrower"+getBorrower();
     }
+
 
     //----------------------- GETTERS END---------------------------------------------------------------------
 }

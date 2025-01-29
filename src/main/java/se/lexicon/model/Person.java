@@ -7,6 +7,7 @@ public class Person {
     // todo: needs completion
 
 
+
     private int id;
     private String firstName;
     private String lastName;
@@ -39,7 +40,9 @@ public class Person {
     }
 
     public void setBorrowedBooks(String[] borrowedBooks){
+
         this.borrowedBooks = borrowedBooks;
+
     }
 
     public void setPersonInformation(String personInformation) {

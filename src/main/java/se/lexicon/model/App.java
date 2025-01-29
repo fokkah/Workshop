@@ -9,17 +9,17 @@ public class App {
         // Initialize and display Book & Person instances
         // Simulate borrowing a book
         // Simulate returning a boo
-
+        Person Tamas;
+        Tamas = new Person("Tamas", "Szalai");
 
 
         Book Hitch = new Book("Hitchhikers Guide", "Douglas Adams");
         Book Mat = new Book( "Ungersk mat", "Gösta svensson");
-        Book Mördare = new Book( "Sverkers liv som mördare", "Tamas");
+        Book Mordare = new Book( "Sverkers liv som mördare", "Botond");
 
 
 
-        Person Tamas;
-        Tamas = new Person("Tamas", "Szalai");
+
         Hitch.setBorrower(Tamas);
         Mat.setBorrower(Tamas);
 
