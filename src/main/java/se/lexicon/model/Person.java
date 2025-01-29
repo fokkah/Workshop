@@ -10,16 +10,20 @@ public class Person {
     private int id;
     private String firstName;
     private String lastName;
-    private Book borrowedBooks;
-
+    private String personInformation;
+    private String[] borrowedBooks;
 
     //-------------------------------------- Fields END-------------------------------------------------------
     //||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
     //------------------------- Constructors ----------------------------------------------------------
 
     public Person(String firstName, String lastName){
-        this.setFirstName(firstName);
-        this.setLastName(lastName);
+        setFirstName(firstName);
+        setLastName(lastName);
+    }
+
+    public Person(String firstName, String lastName, String[] borrowedBooks){
+       setBorrowedBooks(borrowedBooks);
     }
 
     //------------------------- Constructors END -----------------------------------------------------------
@@ -32,6 +36,14 @@ public class Person {
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
+    }
+
+    public void setBorrowedBooks(String[] borrowedBooks){
+        this.borrowedBooks = borrowedBooks;
+    }
+
+    public void setPersonInformation(String personInformation) {
+        this.personInformation = personInformation;
     }
 
     //----------------------- SETTERS END -----------------------------------------------------------------
@@ -48,6 +60,14 @@ public class Person {
 
     public int getId() {
         return id;
+    }
+
+    public String[] getBorrowedBooks() {
+        return borrowedBooks;
+    }
+
+    public String getPersonInformation(){
+        return "ID: "+id+ "\nName: "+firstName+ "" +lastName+ "\nBooks on loan: " +getBorrowedBooks();
     }
 
 

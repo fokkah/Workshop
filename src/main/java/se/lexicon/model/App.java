@@ -11,20 +11,35 @@ public class App {
         // Simulate returning a book
 
 
-        Book title;
-        title = new Book(": 1\n", "Hitchhikers Guide\n", "Douglas Adams");
 
-        ArrayList<Book>bookTitle =new ArrayList<Book>();
-        bookTitle.add(title);
+        Book Hitch = new Book("Hitchhikers Guide", "Douglas Adams");
+        Book Mat = new Book( "Ungersk mat", "Gösta svensson");
+        Book Mördare = new Book( "Sverkers liv som mördare", "Tamas");
+        Book
 
-        Person person;
-        person = new Person("Tamas", "Szalai");
 
-        System.out.println("Borrower: " + title.getBorrower());
-        System.out.println("Title: " + title.getTitle());
-        System.out.println("ID: " + title.getId());
-        System.out.println("Author " + title.getAuthor());
-        System.out.println("Available? " + title.getAvailable());
+
+        Person Tamas;
+        Tamas = new Person("Tamas", "Szalai");
+        Hitch.setBorrower(Tamas);
+        Mat.setBorrower(Tamas);
+
+        //------------------------------ Person SOUT -----------------------------------------------
+
+        //System.out.println(person.getFirstName());
+        //System.out.println(person.getLastName());
+        //System.out.println(person.getId());
+        //System.out.println(person.getPersonInformation());
+        System.out.println(Tamas.getBorrowedBooks());
+
+
+
+
+
+
+        //------------------------------ Book SOUT -----------------------------------------------
+
+
 
 
 

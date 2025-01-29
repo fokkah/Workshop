@@ -14,8 +14,8 @@ public class Book {
     private String id;
     private String title;
     private String author;
-    private String borrower;
-    private Boolean available;
+    private Person borrower;
+    private boolean available;
 
 
    //-------------------------------------- Fields END-------------------------------------------------------
@@ -23,18 +23,24 @@ public class Book {
     //------------------------- Constructors -----------------------------------------------------------
 
 
-    public Book(String id, String title, String author) {
-        this.setId(id);
-        this.setTitle(title);
-        this.setAuthor(author);
+    public Book(String title, String author) {
+        setTitle(title);
+        setAuthor(author);
 
+    }
+
+    public Book(String title, String author, Person borrower) {
+        setTitle(title);
+        setAuthor(author);
+        setBorrower(borrower);
     }
 
     //------------------------- Constructors END -----------------------------------------------------------
     //||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
     //--------------- SETTERS -------------------------------------------------------------------------
 
-    public void setId(String id) {
+    private void setId(String id) {
+
         this.id = id;
     }
 
@@ -46,15 +52,20 @@ public class Book {
         this.author = author;
     }
 
-    public void setBorrower(String borrower) {
-        if (borrower == null) {
+    public void setBorrower(Person borrower) {
+        if (available) {
+            setAvailable(true);
             System.out.println("Ready to be borrowed");
+            this.borrower = borrower;
         }else System.out.println(title + "is at the moment loaned");
-        this.borrower = borrower;
     }
 
     public void setAvailable(Boolean available) {
         if (available == null) {
+            if (available == null) {
+                
+            }
+
 
         }
         this.available = available;
@@ -76,12 +87,12 @@ public class Book {
         return author;
     }
 
-    public String getBorrower() {
+    public Person getBorrower() {
         return borrower;
     }
 
     public Boolean getAvailable() {
-        if (available == null) {
+        if (available) {
             System.out.println("Not available for loan");
 
         }
