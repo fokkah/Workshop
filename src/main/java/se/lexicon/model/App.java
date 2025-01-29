@@ -15,7 +15,6 @@ public class App {
         Book Hitch = new Book("Hitchhikers Guide", "Douglas Adams");
         Book Mat = new Book( "Ungersk mat", "Gösta svensson");
         Book Mördare = new Book( "Sverkers liv som mördare", "Tamas");
-        Book
 
 
 
