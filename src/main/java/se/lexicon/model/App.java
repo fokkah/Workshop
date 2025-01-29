@@ -8,7 +8,7 @@ public class App {
         // todo: needs completion
         // Initialize and display Book & Person instances
         // Simulate borrowing a book
-        // Simulate returning a book
+        // Simulate returning a boo
 
 
 
