@@ -1,4 +1,5 @@
 package se.lexicon.model;
+
 /**
  * This class represents a Person model with properties and methods
  * to manage personal details and interactions with the library system.
@@ -9,25 +10,24 @@ public class Person {
 
 
     private int id;
+    private int bookId;
     private String firstName;
     private String lastName;
     private String personInformation;
-    private String[] borrowedBooks;
+    public String borrowedBooks;
 
     //-------------------------------------- Fields END-------------------------------------------------------
     //||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
     //------------------------- Constructors ----------------------------------------------------------
 
-    public Person(String firstName, String lastName){
-        setFirstName(firstName);
-        setLastName(lastName);
+    public Person(int id, String firstName, String lastName) {
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
     }
 
-    public Person(String firstName, String lastName, String[] borrowedBooks){
-       setBorrowedBooks(borrowedBooks);
-    }
 
-    //------------------------- Constructors END -----------------------------------------------------------
+//------------------------- Constructors END -----------------------------------------------------------
     //||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
     //--------------- SETTERS -------------------------------------------------------------------------
 
@@ -39,10 +39,21 @@ public class Person {
         this.lastName = lastName;
     }
 
-    public void setBorrowedBooks(String[] borrowedBooks){
+    public String setBorrowedBooks(String s){
 
         this.borrowedBooks = borrowedBooks;
+        return borrowedBooks;
+    }
 
+    public void setBookId(int bookId) {
+        this.bookId = bookId;
+    }
+
+    public void setLibrary(int bookId, String Title, String Author) {
+
+        this.setLibrary(1, "Hitchhicker Guide To The Galaxy", "Dougles Adams");
+        this.setLibrary(2, "Mat Guiden", "Botond Földieper");
+        this.setLibrary(3, "Killers", "Elon Musket");
     }
 
     public void setPersonInformation(String personInformation) {
@@ -65,12 +76,17 @@ public class Person {
         return id;
     }
 
-    public String[] getBorrowedBooks() {
+    public int getBookId() {
+        return bookId;
+    }
+
+    public String getBorrowedBooks() {
         return borrowedBooks;
+
     }
 
     public String getPersonInformation(){
-        return "ID: "+id+ "\nName: "+firstName+ "" +lastName+ "\nBooks on loan: " +getBorrowedBooks();
+        return "ID: "+id+ "\nName: "+firstName+ "" +lastName+ "\nBooks on loan: " + borrowedBooks;
     }
 
 
